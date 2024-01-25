@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BOTのコマンドリスト</title>
+</head>
+<body>
+<nav><h1>このBOTでできるコマンド</h1></nav>
+<h3><input id="copyTarget" type="text" value="!tomi_help" readonly>
+<button onclick="copyToClipboard()">コマンドをコピーする</button><p>ヘルプが見れます。</p><br>
+<input id="copyTarget" type="text" value="!tomi_bj start" readonly>
+<button onclick="copyToClipboard()">コマンドをコピーする</button><p>ブラックジャックが開始できます。</p><br>
+<input id="copyTarget" type="text" value="!tomi_bj hit" readonly>
+<button onclick="copyToClipboard()">コマンドをコピーする</button><p>ブラックジャックを開始しているときにhitをすることができます。</p><br>
+<input id="copyTarget" type="text" value="!tomi_bj stand" readonly>
+<button onclick="copyToClipboard()">コマンドをコピーする</button><p>ブラックジャックでスタンドをすることができます。</p><br>
+<input id="copyTarget" type="text" value="!計算 1*1" readonly>
+<button onclick="copyToClipboard()">このサンプルコマンドをコピーする</button><p>計算できます。</p><br>
+<input id="copyTarget" type="text" value="!tomi_bookstart" readonly>
+<button onclick="copyToClipboard()">コマンドをコピーする</button><p>本が読めます。</p><br>
+<input id="copyTarget" type="text" value="!tomi_roulette 1st" readonly>
+<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>ルーレットができます。かけるものはたくさんあります。</p><br>
+<input id="copyTarget" type="text" value="!tomi_god 応援したい人" readonly>
+<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>指定した人を神だ！と称えます。</p><br>
+<input id="copyTarget" type="text" value="!tomi_birthday お祝いしたい人" readonly>
+<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>指定した人の誕生日を祝います。</p><br>
+<input id="copyTarget" type="text" value="!t_embed 送信したいメッセージ" readonly>
+<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>送信したい内容を埋め込みにします。</p><br>
+<input id="copyTarget" type="text" value="!tomi_hutosugi 送りたいメッセージ" readonly>
+<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>送りたいメッセージを太い字にします。</p><br>
+
+</h3>
+
+ <script>
+        function copyToClipboard() {
+            // コピー対象をJavaScript上で変数として定義する
+            var copyTarget = document.getElementById("copyTarget");
+
+            // コピー対象のテキストを選択する
+            copyTarget.select();
+
+            // 選択しているテキストをクリップボードにコピーする
+            document.execCommand("Copy");
+
+            // コピーをお知らせする
+            alert("コピーできました！ : " + copyTarget.value);
+        }
+    </script>
+</body>
+</html>
