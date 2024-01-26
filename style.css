@@ -4,7 +4,7 @@ body {
 }
 
 nav {
-    background-color: #abffff;
+    background-color: #3498db;
     text-align: center;
     padding: 10px;
 }
@@ -43,15 +43,15 @@ input[type="text"] {
 
 button {
     padding: 10px 20px;
-    background: #abffff;
-    color: #000; /* Updated text color inside the button to black */
+    background: #3498db;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #40f7f4;
+    background: #2980b9;
 }
 
 p {
@@ -72,6 +72,7 @@ p {
     align-items: center;
     position: relative;
     z-index: 100;
+    /* 重なり順を一番上にする */
     cursor: pointer;
 }
 
@@ -122,6 +123,7 @@ p {
     position: fixed;
     top: 0;
     left: 100%;
+    /* メニューを画面の外に飛ばす */
     z-index: 99;
     background: #fff;
     transition: 0.5s;
@@ -135,6 +137,7 @@ p {
 /* アイコンがクリックされたらメニューを表示 */
 #drawer_input:checked~.nav_content {
     left: 0;
+    /* メニューを画面に入れる */
 }
 
 li {
