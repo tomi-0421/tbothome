@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
     <meta name="description" content="とみーのBOTは、誰でも楽しく使えるように作っています。ぜひこのホームページを開いて、とみーのBOTについて学んでください。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +22,7 @@
             align-items: center;
             justify-content: space-between;
             color: #000; /* Text color for the light mode */
+            padding: 10px;
         }
 
         body.dark-mode nav {
@@ -90,13 +90,17 @@
             width: 0;
             height: 0;
         }
+
+        .content {
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
     <nav>
         <h1>とみーのBOT</h1>
         <div class="toggle-container">
-            <span class="toggle-label">ダークモード:</span>
+            <span class="toggle-label">Dark Mode:</span>
             <label class="toggle-switch">
                 <input type="checkbox" onclick="toggleDarkMode()">
                 <span class="toggle-slider"></span>
@@ -106,8 +110,15 @@
         <a href="sonota.html">その他の機能</a>
         <a href="riyoukiyaku.html">BOT利用規約</a>
     </nav>
-    <!-- Rest of your content -->
-    <!-- ... -->
+    <div class="content">
+        <!-- Your content goes here -->
+        <h2>👇👇とみーのBOTでできること</h2>
+        <a href="botcommand.html">コマンドリスト</a>
+        <a href="sonota.html">その他の機能</a>
+        <h2>今すぐBOTを導入しよう...</h2>
+        <p>とみーのBOTはたくさんの素晴らしい機能を兼ね備えています。</p>
+        <p>今すぐ導入しましょう</p><a href="https://discord.com/api/oauth2/authorize?client_id=1189780142915076147&permissions=8&scope=bot%20applications.commands">とみーのBOT</a> <a href="https://discord.gg/bhVpE6cfSR">サポートサーバー</a>
+    </div>
 
     <script>
         // Function to toggle dark mode
