@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta charset="utf-8">
-	<meta name="description" content="とみーのBOTは、誰でも楽しく使えるように作っています。ぜひこのホームページを開いて、とみーのBOTについて学んでください。">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>BOTのホームページ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="とみーのBOTは、誰でも楽しく使えるように作っています。ぜひこのホームページを開いて、とみーのBOTについて学んでください。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOTのホームページ</title>
+    <style>
+        body {
+            background-color: #fff; /* Default background color */
+            color: #000; /* Default text color */
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        body.dark-mode {
+            background-color: #333; /* Dark mode background color */
+            color: #fff; /* Dark mode text color */
+        }
+    </style>
 </head>
 <body>
-<nav>	
-<h1>とみーのBOT<br></h1> <a href="botcommand.html">コマンドリスト</a>  <a href="sonota.html">その他の機能</a> <a href="riyoukiyaku.html">BOT利用規約</a>
-</nav>
-<h2>👇👇とみーのBOTでできること</h2>
-<a href="botcommand.html">コマンドリスト</a>
-<a href="sonota.html">その他の機能</a>
-<h2>今すぐBOTを導入しよう...</h2>
-<p>とみーのBOTはたくさんの素晴らしい機能を兼ね備えています。</p>
-<p>今すぐ導入しましょう</p><a href="https://discord.com/api/oauth2/authorize?client_id=1189780142915076147&permissions=8&scope=bot%20applications.commands">とみーのBOT</a> <a href="https://discord.gg/bhVpE6cfSR">サポートサーバー</a>
+    <nav>    
+        <h1>とみーのBOT<br></h1> <a href="botcommand.html">コマンドリスト</a>  <a href="sonota.html">その他の機能</a> <a href="riyoukiyaku.html">BOT利用規約</a>
+    </nav>
+    <h2>👇👇とみーのBOTでできること</h2>
+    <a href="botcommand.html">コマンドリスト</a>
+    <a href="sonota.html">その他の機能</a>
+    <h2>今すぐBOTを導入しよう...</h2>
+    <p>とみーのBOTはたくさんの素晴らしい機能を兼ね備えています。</p>
+    <p>今すぐ導入しましょう</p><a href="https://discord.com/api/oauth2/authorize?client_id=1189780142915076147&permissions=8&scope=bot%20applications.commands">とみーのBOT</a> <a href="https://discord.gg/bhVpE6cfSR">サポートサーバー</a>
+
+    <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
