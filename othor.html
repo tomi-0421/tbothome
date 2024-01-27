@@ -2,15 +2,13 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="とみーのBOTは、誰でも楽しく使えるように作っています。ぜひこのホームページを開いて、とみーのBOTについて学んでください。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>その他の機能</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>BOTのホームページ</title>
     <style>
         body {
-            background-color: #fff; /* Default background color */
-            color: #000; /* Default text color */
             transition: background-color 0.5s, color 0.5s;
+            margin: 0; /* Remove default margin */
         }
 
         body.dark-mode {
@@ -23,6 +21,7 @@
             align-items: center;
             justify-content: space-between;
             color: #000; /* Text color for the light mode */
+            background-color: #abfffc; /* Background color for the nav bar */
             padding: 10px;
         }
 
@@ -32,13 +31,14 @@
 
         nav h1 {
             color: inherit; /* Inherit the color from the parent */
+            margin-right: 10px;
         }
 
         body.dark-mode nav h1 {
             color: #000; /* Text color for the dark mode */
         }
 
-        .toggle-container {
+        .toggle-switch {
             display: flex;
             align-items: center;
         }
@@ -47,23 +47,11 @@
             margin-right: 10px;
         }
 
-        .toggle-switch {
+        .toggle-slider {
             position: relative;
             display: inline-block;
             width: 60px;
             height: 34px;
-        }
-
-        .toggle-slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: 0.4s;
-            border-radius: 34px;
         }
 
         .toggle-slider:before {
@@ -87,9 +75,38 @@
         }
 
         .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
+            display: none; /* Hide the default checkbox */
+        }
+
+        .toggle-switch label {
+            cursor: pointer;
+            display: block;
+            width: 60px;
+            height: 34px;
+            position: relative;
+            border-radius: 34px;
+            background-color: #ccc;
+        }
+
+        .toggle-switch label:before {
+            content: '';
+            display: block;
+            width: 34px;
+            height: 34px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            background-color: #fff;
+            transition: 0.4s;
+        }
+
+        .toggle-switch input:checked + label {
+            background-color: #4CAF50; /* Dark green color for dark mode */
+        }
+
+        .toggle-switch input:checked + label:before {
+            transform: translateX(26px);
         }
 
         .content {
@@ -99,26 +116,19 @@
 </head>
 <body>
     <nav>
-        <h1>とみーのBOT</h1>
-        <div class="toggle-container">
+        <h1>その他の機能</h1>
+        <div class="toggle-switch">
             <span class="toggle-label">Dark Mode:</span>
-            <label class="toggle-switch">
-                <input type="checkbox" onclick="toggleDarkMode()">
-                <span class="toggle-slider"></span>
-            </label>
+            <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+            <label for="dark-mode-toggle"></label>
         </div>
-        <a href="botcommand.html">コマンドリスト</a>
-        <a href="othor.html">その他の機能</a>
-        <a href="riyoukiyaku.html">BOT利用規約</a>
+        <a href="index.html">トップページ</a> <a href="botcommand.html">コマンドリスト</a> <a href="othor.html">その他の機能</a> <a href="riyoukiyaku.html">BOT利用規約</a>
     </nav>
     <div class="content">
-        <!-- Your content goes here -->
-        <h2>👇👇とみーのBOTでできること</h2>
-        <a href="botcommand.html">コマンドリスト</a>
-        <a href="othor.html">その他の機能</a>
-        <h2>今すぐBOTを導入しよう...</h2>
-        <p>とみーのBOTはたくさんの素晴らしい機能を兼ね備えています。</p>
-        <p>今すぐ導入しましょう</p><a href="https://discord.com/api/oauth2/authorize?client_id=1189780142915076147&permissions=8&scope=bot%20applications.commands">とみーのBOT</a> <a href="https://discord.gg/bhVpE6cfSR">サポートサーバー</a>
+        <h2>とみーのBOTのその他の機能</h2>
+        <p>とみーのBOTには、様々なコマンドがあります。👉<a href="botcommand.html">コマンドリスト</a>しかし、そのほかにも機能はあります。今からその一例を言います。</p>
+        <h3>挨拶</h3><img src="image.png" alt="挨拶のイメージ">
+        <p>VC通知</p><img src="image1.png" alt="VC通知のイメージ">
     </div>
 
     <script>
