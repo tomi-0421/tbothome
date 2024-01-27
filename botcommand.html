@@ -36,12 +36,12 @@
 
  <script>
  function copyToClipboard() { 
-// コピー対象をJavaScript上で変数として定義する 
-var copyTarget = document.getElementById("copyTarget"); // コピー対象のテキストを選択する 
-copyTarget.select(); // 選択しているテキストをクリップボードにコピーする 
-document.execCommand("Copy"); 
-// コピーをお知らせする 
-alert("コピーできました！ : " + copyTarget.value); }
+function copyToClipboard(){ 
+const copyTarget = document.getElementById("copyTarget");
+copyTarget.select(); 
+document.execCommand("Copy");  
+alert(`コピーできました！ : ${copyTarget.value}`); 
+}
     </script>
 </body>
 </html>
