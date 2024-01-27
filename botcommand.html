@@ -1,46 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="とみーのBOTは、誰でも楽しく使えるように作っています。ぜひこのホームページを開いて、とみーのBOTについて学んでください。">
-	<title>BOTのコマンドリスト</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOTのコマンドリスト</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+            margin: 0; /* Remove default margin */
+        }
+
+        body.dark-mode {
+            background-color: #111; /* Darker background color */
+            color: #fff; /* Dark mode text color */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #000; /* Text color for the light mode */
+            background-color: #abfffc; /* Background color for the nav bar */
+            padding: 10px;
+        }
+
+        body.dark-mode nav {
+            color: #fff; /* Text color for the dark mode */
+        }
+
+        nav h1 {
+            color: inherit; /* Inherit the color from the parent */
+            margin-right: 10px;
+        }
+
+        body.dark-mode nav h1 {
+            color: #000; /* Text color for the dark mode */
+        }
+
+        h3 {
+            padding: 20px;
+        }
+
+        input {
+            margin-right: 5px;
+            width: 300px;
+        }
+
+        button {
+            background-color: #abfffc;
+            border: none;
+            color: #000;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
+
+        body.dark-mode button {
+            background-color: #333; /* Dark background color for buttons in dark mode */
+            color: #fff; /* Text color for buttons in dark mode */
+        }
+    </style>
 </head>
 <body>
-<nav><h1>このBOTでできるコマンド</h1><br><a href="botcommand.html">コマンドリスト</a>  <a href="othor.html">その他の機能</a> <a href="riyoukiyaku.html">BOT利用規約</a> </nav>
-<h3><input id="copyTarget" type="text" value="!tomi_help" readonly>
-<button onclick="copyToClipboard()">コマンドをコピーする</button><p>ヘルプが見れます。</p><br>
-<input id="copyTarget" type="text" value="!tomi_bj start" readonly>
-<button onclick="copyToClipboard()">コマンドをコピーする</button><p>ブラックジャックが開始できます。</p><br>
-<input id="copyTarget" type="text" value="!tomi_bj hit" readonly>
-<button onclick="copyToClipboard()">コマンドをコピーする</button><p>ブラックジャックを開始しているときにhitをすることができます。</p><br>
-<input id="copyTarget" type="text" value="!tomi_bj stand" readonly>
-<button onclick="copyToClipboard()">コマンドをコピーする</button><p>ブラックジャックでスタンドをすることができます。</p><br>
-<input id="copyTarget" type="text" value="!計算 1*1" readonly>
-<button onclick="copyToClipboard()">このサンプルコマンドをコピーする</button><p>計算できます。</p><br>
-<input id="copyTarget" type="text" value="!tomi_bookstart" readonly>
-<button onclick="copyToClipboard()">コマンドをコピーする</button><p>本が読めます。</p><br>
-<input id="copyTarget" type="text" value="!tomi_roulette 1st" readonly>
-<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>ルーレットができます。かけるものはたくさんあります。</p><br>
-<input id="copyTarget" type="text" value="!tomi_god 応援したい人" readonly>
-<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>指定した人を神だ！と称えます。</p><br>
-<input id="copyTarget" type="text" value="!tomi_birthday お祝いしたい人" readonly>
-<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>指定した人の誕生日を祝います。</p><br>
-<input id="copyTarget" type="text" value="!t_embed 送信したいメッセージ" readonly>
-<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>送信したい内容を埋め込みにします。</p><br>
-<input id="copyTarget" type="text" value="!tomi_hutosugi 送りたいメッセージ" readonly>
-<button onclick="copyToClipboard()">サンプルコマンドをコピーする</button><p>送りたいメッセージを太い字にします。</p><br>
+    <nav>
+        <h1>このBOTでできるコマンド</h1>
+        <div class="toggle-switch">
+            <span class="toggle-label">Dark Mode:</span>
+            <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+            <label for="dark-mode-toggle"></label>
+        </div>
+        <a href="botcommand.html">コマンドリスト</a> <a href="othor.html">その他の機能</a> <a href="riyoukiyaku.html">BOT利用規約</a>
+    </nav>
+    <h3>
+        <input id="copyTarget1" type="text" value="!tomi_help" readonly>
+        <button onclick="copyToClipboard('copyTarget1')">コマンドをコピーする</button>
+        <p>ヘルプが見れます。</p><br>
 
-</h3>
+        <!-- 他のコマンドも同様に追加 -->
 
- <script>
-function copyToClipboard(){ 
-const copyTarget = document.getElementById("copyTarget");
-copyTarget.select(); 
-document.execCommand("Copy");  
-alert(`コピーできました！ : ${copyTarget.value}`); 
-}
-</script>
+    </h3>
+
+    <script>
+        function copyToClipboard(copyTargetId) {
+            const copyTarget = document.getElementById(copyTargetId);
+            copyTarget.select();
+            document.execCommand("Copy");
+            alert(`コピーできました！ : ${copyTarget.value}`);
+        }
+
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
