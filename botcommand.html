@@ -35,13 +35,12 @@
 </h3>
 
  <script>
- function copyToClipboard() { 
 function copyToClipboard(){ 
 const copyTarget = document.getElementById("copyTarget");
 copyTarget.select(); 
 document.execCommand("Copy");  
 alert(`コピーできました！ : ${copyTarget.value}`); 
 }
-    </script>
+</script>
 </body>
 </html>
