@@ -17,11 +17,21 @@
             background-color: #333; /* Dark mode background color */
             color: #fff; /* Dark mode text color */
         }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav button {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <h1>とみーのBOT<br></h1>
+        <h1>とみーのBOT</h1>
         <button onclick="toggleDarkMode()">ダークモード切り替え</button>
         <a href="botcommand.html">コマンドリスト</a>
         <a href="sonota.html">その他の機能</a>
