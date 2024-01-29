@@ -1,24 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="とみーのBOTは、誰でも楽しく使えるように作っています。ぜひこのホームページを開いて、とみーのBOTについて学んでください。（このページは利用規約です。導入前に読んでもらえると嬉しいです。">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>とみーのBOT利用規約</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="とみーのBOTは、誰でも楽しく使えるように作っています。ぜひこのホームページを開いて、とみーのBOTについて学んでください。（このページは利用規約です。導入前に読んでもらえると嬉しいです。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>とみーのBOT利用規約</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+    </style>
 </head>
 <body>
-<nav><h1>とみーのBOTの利用規約</h1><br><a href="index.html">トップページ</a> <a href="botcommand.html">コマンドリスト</a>  <a href="othor.html">その他の機能</a> <a href="riyoukiyaku.html">BOT利用規約</a> </nav>
-<h3>この規約は、変更する場合がございます。ですので、<a href="https://discord.gg/mWdkxyFxw9">BOTのサポートサーバー</a>に入っておいてほしいです。</h3>
-<h4>1,基本的な規約</h4><p>このBOTは、安全に楽しく雑談を進めるために作られたものです。それを崩したり、荒らしに悪用利用するなどの行為は禁止としています。</p>
-<h4>2,このBOTなどのお問い合わせ</h4><p>このBOTは、とみー（discordユーザー名:@countdown3.2.1)の作成したBOTですので、この人のダイレクトメッセージ</p>
-<p>もしくは、<a href="https://discord.gg/mWdkxyFxw9">BOTの公式サーバー</a>の意見箱チャンネルによって意見をお伝えください。</p>
-<p>皆さんの意見が、このBOTにとって重要な情報ですので、どんどん意見などを伝えてほしいです。</p>
-<h4>3,本利用規約の違反者に対する対処</h4><p>本規約は、皆さんが楽しく雑談や、BOTの機能を使ってもらうために作成したものです。</p>
-<p>この規約が破られると、本来楽しい雑談であるはずだったものが崩れてしまう可能性があります。</p>
-<p>ですので、規約違反を見つけた場合には速やかに報告をお願いしたいです。</p>
-<p>BOTのオーナーとみーが、迅速な対応を施します。</p><br><p>これにてこのBOTの利用規約は終わりです。今まで読んでくれてありがとう。<br>たのしいBOT生活を楽しんで！</p>
-<a href="https://www.youtube.com/channel/UCtGJMAFfyjNO5tab0pAbu3g/"><img width=50 src="image2.png"></a> <a href="https://discord.gg/tNGX7tewsu"><img width=50 src="image3.png"></a>   <a href="https://www.twitch.tv/tomi1sanndayo/about"><img width=50 src="image4.png"></a> <a href="https://twitter.com/CLP_chocho"><img width=50 src="image5.png"></a> <a href="https://github.com/tomi-0421/"><img width=50 src="image6.png"></a> <a href="https://hintstock.com/hint/users/clpchochosama/"><img width=50 src="image7.png"></a>
-<h5>Copyright(c) 2023 とみー All rights reserved</h5>
+    <nav>
+        <h1>とみーのBOTの利用規約</h1>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+    </nav>
+    <h3>この規約は、変更する場合がございます。ですので、<a href="https://discord.gg/mWdkxyFxw9">BOTのサポートサーバー</a>に入っておいてほしいです。</h3>
+    <h4>1,基本的な規約</h4>
+    <p>このBOTは、安全に楽しく雑談を進めるために作られたものです。それを崩したり、荒らしに悪用利用するなどの行為は禁止としています。</p>
+    <h4>2,このBOTなどのお問い合わせ</h4>
+    <p>このBOTは、とみー（discordユーザー名:@countdown3.2.1)の作成したBOTですので、この人のダイレクトメッセージ</p>
+    <p>もしくは、<a href="https://discord.gg/mWdkxyFxw9">BOTの公式サーバー</a>の意見箱チャンネルによって意見をお伝えください。</p>
+    <p>皆さんの意見が、このBOTにとって重要な情報ですので、どんどん意見などを伝えてほしいです。</p>
+    <h4>3,本利用規約の違反者に対する対処</h4>
+    <p>本規約は、皆さんが楽しく雑談や、BOTの機能を使ってもらうために作成したものです。</p>
+    <p>この規約が破られると、本来楽しい雑談であるはずだったものが崩れてしまう可能性があります。</p>
+    <p>ですので、規約違反を見つけた場合には速やかに報告をお願いしたいです。</p>
+    <p>BOTのオーナーとみーが、迅速な対応を施します。</p>
+    <p>これにてこのBOTの利用規約は終わりです。今まで読んでくれてありがとう。<br>たのしいBOT生活を楽しんで！</p>
+    <a href="https://www.youtube.com/channel/UCtGJMAFfyjNO5tab0pAbu3g/"><img width=50 src="image2.png"></a> 
+    <a href="https://discord.gg/tNGX7tewsu"><img width=50 src="image3.png"></a>   
+    <a href="https://www.twitch.tv/tomi1sanndayo/about"><img width=50 src="image4.png"></a> 
+    <a href="https://twitter.com/CLP_chocho"><img width=50 src="image5.png"></a> 
+    <a href="https://github.com/tomi-0421/"><img width=50 src="image6.png"></a> 
+    <a href="https://hintstock.com/hint/users/clpchochosama/"><img width=50 src="image7.png"></a>
+    <h5>Copyright(c) 2023 とみー All rights reserved</h5>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode', darkModeToggle.checked);
+        });
+    </script>
 </body>
 </html>
