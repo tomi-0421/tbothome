@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'hgp創英角ゴシックub',sans-serif;
+    font-family: 'hgp創英角ゴシックub', sans-serif;
 }
 
 nav {
@@ -14,7 +14,8 @@ h1 {
 }
 
 h2 {
-    color: #3498db;
+    color: #000000; /* h2の文字色を黒に設定 */
+    text-align: center; /* h2のテキストを中央寄せに設定 */
 }
 
 a {
