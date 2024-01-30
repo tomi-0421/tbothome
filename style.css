@@ -21,8 +21,9 @@ h2 {
 a {
     color: #3498db;
     text-decoration: none;
-    margin-right: 20px;
     display: inline-block; /* 複数のリンクが横に並ぶように設定 */
+    margin-right: 20px;
+    text-align: center; /* リンクのテキストを中央寄せに設定 */
 }
 
 a:hover {
