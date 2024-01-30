@@ -14,14 +14,15 @@ h1 {
 }
 
 h2 {
-    color: #000000; /* h2の文字色を黒に設定 */
-    text-align: center; /* h2のテキストを中央寄せに設定 */
+    color: #000000;
+    text-align: center;
 }
 
 a {
     color: #3498db;
     text-decoration: none;
     margin-right: 20px;
+    display: inline-block; /* 複数のリンクが横に並ぶように設定 */
 }
 
 a:hover {
@@ -57,6 +58,7 @@ button:hover {
 
 p {
     margin-bottom: 20px;
+    text-align: center; /* 段落内のテキストを中央寄せに変更 */
 }
 
 /* チェックボックスを非表示にする */
