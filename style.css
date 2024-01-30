@@ -18,17 +18,6 @@ h2 {
     text-align: center;
 }
 
-a {
-    color: #3498db;
-    text-decoration: none;
-    display: inline-block; /* 複数のリンクが横に並ぶように設定 */
-    margin-right: 20px;
-    text-align: center; /* リンクのテキストを中央寄せに設定 */
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 a {
     color: #3498db;
@@ -155,4 +144,18 @@ p {
 
 li {
     list-style: none;
+}
+div {
+    text-align: center !important; /* !important を使用して他のスタイルを上書き */
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
