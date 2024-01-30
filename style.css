@@ -30,6 +30,18 @@ a:hover {
     text-decoration: underline;
 }
 
+a {
+    color: #3498db;
+    text-decoration: none;
+    display: inline-block; /* 複数のリンクが横に並ぶように設定 */
+    margin-right: 20px;
+    text-align: center; /* テキストを中央寄せに追加 */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .container {
     margin: 20px;
 }
