@@ -154,11 +154,13 @@ a {
     text-decoration: none;
     display: inline-block;
     margin-right: 20px;
+    text-align: center; /* Center-align the text within the anchor tags */
 }
 
 a:hover {
     text-decoration: underline;
 }
+
 <<<<<<< HEAD
 .resizeimage img { width: 100vw; }
 .resizeimage {
