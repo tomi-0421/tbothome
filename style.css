@@ -159,6 +159,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+<<<<<<< HEAD
 .resizeimage img { width: 100vw; }
 .resizeimage {
     text-align: center; /* Center-align the images */
@@ -171,3 +172,6 @@ a:hover {
     margin: 0 auto; /* Center-align the images horizontally */
     display: block;
 }
+=======
+.resizeimage img { width: 100vw; }
+>>>>>>> 996851b4877dc979b706dedaf11c525896e353e2
