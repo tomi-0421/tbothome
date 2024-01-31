@@ -159,4 +159,15 @@ a {
 a:hover {
     text-decoration: underline;
 }
-.resizeimage img { width: 100%; }
+.resizeimage img { width: 100vw; }
+.resizeimage {
+    text-align: center; /* Center-align the images */
+}
+
+.center-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Center-align the images horizontally */
+    display: block;
+}
