@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ランダムな数字ジェネレーター</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    .nav h1{
+        text-align: center;
+    }
+    .nav{
+        background-color: rgb(203, 255, 244);
+    }
+</style>
+</head>
+<body>
+    <nav>
+    <h1>-100~100までのランダム整数生成シミュレーター</h1>
+    </nav>
+    <p id="ランダムの数字"></p>
+  <script>
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min; 
+    }
+
+    var randomNumber = getRandomInt(-100, 100);
+    document.getElementById("ランダムの数字").textContent = "生成された数字：" + randomNumber;
+  </script>
+</body>
+</html>
