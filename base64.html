@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 エンコード/デコード</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Base64 エンコード/デコード</h1>
+
+<textarea id="input" placeholder="エンコードするテキストを入力するか、デコードするBase64文字列を貼り付けてください"></textarea>
+<button onclick="encodeText()">エンコード</button>
+<button onclick="decodeText()">デコード</button>
+<textarea id="output" placeholder="ここに結果が表示されます"></textarea>
+
+<script>
+  function encodeText() {
+    var input = document.getElementById("input").value;
+    var encoded = btoa(unescape(encodeURIComponent(input))); // UTF-8でエンコード
+    document.getElementById("output").value = encoded;
+  }
+
+  function decodeText() {
+    var input = document.getElementById("input").value;
+    var decoded = decodeURIComponent(escape(atob(input))); // UTF-8でデコード
+    document.getElementById("output").value = decoded;
+  }
+</script>
+
+</body>
+</html>
