@@ -14,16 +14,17 @@
     margin-bottom: 10px;
   }
 </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Base64 エンコード/デコード</h1>
+<nav><h1>Base64 エンコード/デコード</h1></nav>
 <p>うぇえええい（？）</p>
 <textarea id="input" placeholder="エンコードするテキストを入力するか、デコードするBase64文字列を貼り付けてください"></textarea>
 <button onclick="encodeText()">エンコード</button>
 <button onclick="decodeText()">デコード</button>
 <textarea id="output" placeholder="ここに結果が表示されます"></textarea>
-<button onclick="copyResult()">結果をコピー</button>
+<button onclick="copyResult()">コピーするぼたん</button>
 
 <script>
   function encodeText() {
@@ -42,7 +43,7 @@
     var output = document.getElementById("output");
     output.select();
     document.execCommand("copy");
-    alert("結果がコピーされました！");
+    alert("コピーされたぜ！");
   }
 </script>
 
